@@ -142,14 +142,6 @@ body {
   min-height: 100vh;
 }
 
-main {
-  display: flex; /* Для размещения контента и side-ad */
-}
-
-.page-content {
-  flex: 1; /* Занимает основное пространство */
-}
-
 .content {
     display: grid;
     grid-template-columns: 3fr 1fr;
