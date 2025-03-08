@@ -1,0 +1,159 @@
+@import url("reset.css");
+
+:root {
+    --primary-color: #35000e;
+    --secondary-color: #000000;
+    --text-color: #270617;
+    --card-background: #fcfcfc;
+    --border-radius: 55px;
+    --font-family: 'Century gothic', sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 2;
+    margin: 0;
+    padding: 0;
+    background-image: url("../resources/kitties.jpg");
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: var(--text-color);
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    width: 80%;
+    margin: 60px auto;
+    overflow: hidden;
+    padding: 30px;
+    background-color: var(--card-background);
+    border-radius: var(--border-radius);
+    position: relative;
+}
+
+.section-container {
+    width: 90%;
+    margin: 15px auto;
+    overflow: hidden;
+    padding: 15px;
+    background-image: url("../resources/stars.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+    border-radius: var(--border-radius);
+    position: relative;
+}
+
+h1, h2, h3 {
+    color: var(--primary-color);
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3.5em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+img {
+    max-width: 25%;
+    height: auto;
+    display: block;
+    margin: 15px auto;
+    border-radius: 20px;
+}
+
+ul, ol {
+    list-style-type: disc;
+    padding-left: 30px;
+    margin-bottom: 20px;
+    color: var(--secondary-color);
+}
+
+li {
+    margin-bottom: 12px;
+}
+
+a {
+    color: var(--primary-color);
+}
+
+p {
+    font-size: 18px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    background-color:var(--card-background);
+}
+
+th, td {
+    padding: 15px 20px;
+    text-align: left;
+    color: var(--text-color);
+}
+
+th {
+    background-color: #fde1f9;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+tr:nth-child(even) {
+    background-color: #fde1f9;
+}
+
+#fun-facts, #movie-review, #star-wars-quotes, #apl-schedule {
+    margin-bottom: 40px;
+}
+
+blockquote {
+    font-style: italic;
+    color: var(--secondary-color);
+    padding: 20px;
+    border-left: 8px solid var(--primary-color);
+    margin: 20px 0;
+    background-color: var(--card-background);
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--secondary-color);
+    color: #ad6d6d;
+    font-size: 1em;
+    margin-top: auto;
+}
+
+#playMathGame {
+    background: #35000e; 
+    border: none;
+    color: white;
+    padding: 25px 35px;
+    text-align: center;
+    display: inline-block;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: "Century Gothic", sans-serif;
+    cursor: pointer;
+    border-radius: var(--border-radius);
+}
+
