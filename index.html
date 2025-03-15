@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MainCharacter™: ваша жизнь заслуживает саундтрека! </title>
+  <title>MainCharacter™: ваша жизнь заслуживает саундтрека!</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
+  <button id="themeToggle">🌑</button>
   <header>
     <h1>MainCharacter™</h1>
     <p>!!!ПОЧУВСТВУЙ СЕБЯ ГЛАВНЫМ ГЕРОЕМ!!!</p>
@@ -22,7 +22,7 @@
         <h2>5 ПРИЧИН, ПОЧЕМУ ВАМ НУЖЕН MainCharacter™ ПРЯМО СЕЙЧАС:</h2>
         <ol>
           <li>Жизнь как в кино.</li>
-          <li>Пусть каждый знает насколько ты крут, или как  ты страдаешь</li>
+          <li>Пусть каждый знает насколько ты крут, или как ты страдаешь</li>
           <li>Разнообразие: кулон будет слышен только для тебя, но умеет через блютуз подключаться к любой колонке.</li>
           <li>Стильный дизайн не позволит людям свести с вас глаз не хуже эпичного саундтрека</li>
           <li>Ты в этой жизни главный актёр, ты сценарист в ней, ты режиссёр</li>
@@ -35,13 +35,29 @@
 
       <section class="testimonials">
         <h2>ОТЗЫВЫ НАШИХ УВАЖАЕМЫХ ПОКУПАТЕЛЕЙ (не боты):</h2>
-        <div class="testimonial">
-          <img src="img/Wife.jpg" alt="Пользователь 1">
-          <p>"Каждая ссора с мужем превращается в захватывающую драму, теперь я могу заниматься любимым делом с еще большим интересом!!!!!" - *Екатерина, 300м от вас*</p>
-        </div>
-        <div class="testimonial">
-          <img src="img/Teenager.jpg" alt="Пользователь 2">
-          <p>"MainCharacter™ - лучшее, что случилось со мной в жизни! После каждой катки в доте я слушаю душераздирающий рэп. Кажется, меня выгоняют из дома" - *Даня, 15 лет*</p>
+        <div id="reviewsList"></div>
+        <form id="reviewForm">
+          <input type="text" id="reviewName" placeholder="Ваше имя" required>
+          <textarea id="reviewText" placeholder="Ваш отзыв" required></textarea>
+          <input type="number" id="reviewRating" placeholder="Оценка (1-5)" min="1" max="5" required>
+          <input type="file" id="reviewImage" accept="image/*">
+          <button type="submit">Добавить отзыв</button>
+        </form>
+        <div>
+          <label for="sortReviews">Сортировать по:</label>
+          <select id="sortReviews">
+            <option value="date">Дате</option>
+            <option value="rating">Оценке</option>
+          </select>
+          <label for="filterReviews">Фильтровать по оценке:</label>
+          <select id="filterReviews">
+            <option value="all">Все</option>
+            <option value="5">5</option>
+            <option value="4">4</option>
+            <option value="3">3</option>
+            <option value="2">2</option>
+            <option value="1">1</option>
+          </select>
         </div>
       </section>
 
@@ -63,21 +79,21 @@
         <p>Инновация нашего дочернего бренда!!!!</p>
       </div>
       <div class="ad">
-        <a href="#"><img src="img/ad.jpg" ></a>
+        <a href="#"><img src="img/ad.jpg"></a>
       </div>
     </aside>
-      </section>
+  </section>
 
   <section class="timer-section">
     <h2>СКИДКА ВОТ-ВОТ ЗАКОНЧИТСЯ!(мы не умеем делать таймеры)</h2>
   </section>
 
-    <div class="side-ad side-ad-left">
-        <a href="#"><img src="img/sale.jpg"></a>
-    </div>
+  <div class="side-ad side-ad-left">
+    <a href="#"><img src="img/sale.jpg"></a>
+  </div>
 
-      <footer style="text-align: center;">
-    <p>© 2025 MainCharacter™  Не лохотрон</p>
+  <footer style="text-align: center;">
+    <p>© 2025 MainCharacter™ Не лохотрон</p>
     <div class="bottom-marquee">
       <span>КУПИ СЕЙЧАС, ИНАЧЕ ПОЖАЛЕЕШЬ! КУПИ СЕЙЧАС, ИНАЧЕ ПОЖАЛЕЕШЬ! КУПИ СЕЙЧАС, ИНАЧЕ ПОЖАЛЕЕШЬ!</span>
     </div>
@@ -92,7 +108,7 @@
 
   <div id="overlay" class="overlay"></div>
 
+  <script src="js/cookie.js"></script>
   <script src="js/script.js"></script>
-
 </body>
 </html>

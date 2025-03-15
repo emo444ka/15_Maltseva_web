@@ -210,6 +210,92 @@ body {
     padding: 10px;
 }
 
+/* Тёмная тема */
+body.dark-theme {
+  background-color: #333;
+  color: #fff;
+}
+
+body.dark-theme header,
+body.dark-theme main,
+body.dark-theme footer {
+  background-color: #444;
+  color: #fff;
+}
+
+body.dark-theme .top-reasons,
+body.dark-theme .testimonials {
+  background-color: #555;
+  color: #fff;
+  border: 2px dotted #fff;
+}
+
+body.dark-theme .sidebar {
+  background-color: #777;
+  color: #444;
+  border: 2px dotted #fff;
+}
+
+body.dark-theme .top-marquee,
+body.dark-theme .bottom-marquee,
+body.dark-theme .slogan,
+body.dark-theme .timer-section {
+  background-color: #fff;
+  color: #444;
+}
+
+body.dark-theme .popup {
+  background-color: #666;
+  color: #fff;
+}
+
+/* Кнопка переключения темы */
+#themeToggle {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background-color: #fff;
+  border-radius: 35px;;
+  padding: 5px;
+  cursor: pointer;
+  font-size: 40px;
+  z-index: 1001;
+}
+
+/* Отзывы */
+#reviewForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#reviewForm input,
+#reviewForm textarea,
+#reviewForm button {
+  padding: 10px;
+  font-size: 16px;
+}
+
+#reviewsList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.review-item {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  color: #333;
+}
+
+.review-item img {
+  max-width: 100px;
+  height: auto;
+  margin-top: 10px;
+}
+
 
 @media (max-width: 768px) {
     .content {
