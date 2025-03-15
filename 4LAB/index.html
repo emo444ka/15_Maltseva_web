@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MainCharacter™: ваша жизнь заслуживает саундтрека!</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <button id="themeToggle">🌑</button>
+  <header>
+    <h1>MainCharacter™</h1>
+    <p>!!!ПОЧУВСТВУЙ СЕБЯ ГЛАВНЫМ ГЕРОЕМ!!!</p>
+    <div class="top-marquee">
+      <span>ТОЛЬКО СЕЙЧАС! УСПЕЙ КУПИТЬ! СКИДКА 99% ДЛЯ ПЕРВЫХ 10 ПОКУПАТЕЛЕЙ!</span>
+    </div>
+  </header>
+
+  <section class="content">
+    <main>
+      <section class="top-reasons">
+        <h2>5 ПРИЧИН, ПОЧЕМУ ВАМ НУЖЕН MainCharacter™ ПРЯМО СЕЙЧАС:</h2>
+        <ol>
+          <li>Жизнь как в кино.</li>
+          <li>Пусть каждый знает насколько ты крут, или как ты страдаешь</li>
+          <li>Разнообразие: кулон будет слышен только для тебя, но умеет через блютуз подключаться к любой колонке.</li>
+          <li>Стильный дизайн не позволит людям свести с вас глаз не хуже эпичного саундтрека</li>
+          <li>Ты в этой жизни главный актёр, ты сценарист в ней, ты режиссёр</li>
+        </ol>
+      </section>
+
+      <section class="slogan">
+        <h2>НАШ ЛОЗУНГ: "ВАША ЖИЗНЬ ЗАСЛУЖИВАЕТ САУНДТРЕКА!"</h2>
+      </section>
+
+      <section class="testimonials">
+        <h2>ОТЗЫВЫ НАШИХ УВАЖАЕМЫХ ПОКУПАТЕЛЕЙ (не боты):</h2>
+        <div id="reviewsList"></div>
+        <form id="reviewForm">
+          <input type="text" id="reviewName" placeholder="Ваше имя" required>
+          <textarea id="reviewText" placeholder="Ваш отзыв" required></textarea>
+          <input type="number" id="reviewRating" placeholder="Оценка (1-5)" min="1" max="5" required>
+          <input type="file" id="reviewImage" accept="image/*">
+          <button type="submit">Добавить отзыв</button>
+        </form>
+        <div>
+          <label for="sortReviews">Сортировать по:</label>
+          <select id="sortReviews">
+            <option value="date">Дате</option>
+            <option value="rating">Оценке</option>
+          </select>
+          <label for="filterReviews">Фильтровать по оценке:</label>
+          <select id="filterReviews">
+            <option value="all">Все</option>
+            <option value="5">5</option>
+            <option value="4">4</option>
+            <option value="3">3</option>
+            <option value="2">2</option>
+            <option value="1">1</option>
+          </select>
+        </div>
+      </section>
+
+      <section class="product-images">
+        <h2>Только взгляните на эту квинтэссенцию технологий и изящества</h2>
+        <img src="img/device1.jpg" alt="Свистящий унитаз 1">
+        <img src="img/device2.jpg" alt="Свистящий унитаз 2">
+      </section>
+    </main>
+
+    <aside class="sidebar">
+      <h2>ДРУГИЕ НАШИ ПРОДУКТЫ:</h2>
+      <div class="ad">
+        <a href="#"><img src="img/cream.jpg" alt="ПОДАРИТЕ СВОЕЙ ВТОРОЙ ПОЛОВИНКЕ"></a>
+        <p> Крем, увеличивающий все, на что хватит фантазии!!!!!</p>
+      </div>
+      <div class="ad">
+        <a> <img src="img/киборгкорова.png" alt="КОРОВИЙ АНТИПЕРЕВОРАЧИВАТЕЛЬ"></a>
+        <p>Инновация нашего дочернего бренда!!!!</p>
+      </div>
+      <div class="ad">
+        <a href="#"><img src="img/ad.jpg"></a>
+      </div>
+    </aside>
+  </section>
+
+  <section class="timer-section">
+    <h2>СКИДКА ВОТ-ВОТ ЗАКОНЧИТСЯ!(мы не умеем делать таймеры)</h2>
+  </section>
+
+  <div class="side-ad side-ad-left">
+    <a href="#"><img src="img/sale.jpg"></a>
+  </div>
+
+  <footer style="text-align: center;">
+    <p>© 2025 MainCharacter™ Не лохотрон</p>
+    <div class="bottom-marquee">
+      <span>КУПИ СЕЙЧАС, ИНАЧЕ ПОЖАЛЕЕШЬ! КУПИ СЕЙЧАС, ИНАЧЕ ПОЖАЛЕЕШЬ! КУПИ СЕЙЧАС, ИНАЧЕ ПОЖАЛЕЕШЬ!</span>
+    </div>
+  </footer>
+
+  <div id="popup" class="popup" style="display: block;">
+    <span class="close-button" onclick="closePopup()">X</span>
+    <h2>ВНИМАНИЕ! СУПЕР-ПРЕДЛОЖЕНИЕ!</h2>
+    <p>Купи MainCharacter™ и получи кредит в подарок! </p>
+    <button>КУПИТЬ СЕЙЧАС!!! (кнопка не работает)</button>
+  </div>
+
+  <div id="overlay" class="overlay"></div>
+
+  <script src="js/cookie.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

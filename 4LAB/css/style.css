@@ -1,0 +1,338 @@
+@import url("reset.css");
+
+body {
+  font-family: "Comic Sans MS", cursive, sans-serif; 
+  font-size: 1.5em;
+  margin: 0;
+  padding: 0;
+  background-color: white; 
+  color: red; 
+  overflow-x: hidden;
+}
+
+header {
+  background-color: green;
+  color: yellow;
+  text-align: center;
+  padding: 35px;
+  position: relative; 
+  overflow: hidden; 
+}
+
+.top-marquee {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: yellow;
+  color: red;
+  font-weight: bold;
+  overflow: hidden;
+  white-space: nowrap; 
+  animation: marquee 15s linear infinite;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.bottom-marquee {
+  position: fixed; 
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: green;
+  color: red;
+  font-weight: bold;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: marqueeBottom 20s linear infinite;
+}
+
+@keyframes marqueeBottom {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.top-reasons {
+  padding: 20px;
+  background-color: #fff;
+  margin-bottom: 20px;
+  border: 5px dotted orangered; 
+}
+
+.slogan {
+  background-color: #ffff00; 
+  text-align: center;
+  padding: 10px;
+  font-style: italic;
+  font-size: 1.5em;
+  color: #0000ff; 
+}
+
+.testimonials {
+  padding: 20px;
+  background-color: lightblue;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border: 3px dashed orange; 
+}
+
+.testimonial {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.testimonial img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 2px solid green; 
+}
+
+.product-images {
+  padding: 20px;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  border: 4px double purple; 
+}
+
+.product-images img {
+  max-width: 200px;
+  height: auto;
+  margin: 10px;
+  border: 2px solid blue;
+}
+
+.sidebar {
+  padding: 20px;
+  background-color: pink; 
+  border: 3px groove brown; 
+}
+
+.ad {
+  margin-bottom: 10px;
+  text-align: center;
+  border: 2px dotted orange;
+  padding: 5px;
+  background-color: #fff;
+}
+
+.ad img {
+  max-width: 200px;
+  height: auto;
+  border: 1px solid black; 
+}
+
+footer {
+  background-color: green;
+  color: #fff;
+  padding: 40px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.side-ad {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 999; 
+}
+
+.side-ad-left {
+    left: 10px;
+}
+
+
+.side-ad img {
+    border: 3px solid red;
+    max-width: 200px;
+    height: auto;
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: pink; 
+    border: 5px solid orange;
+    padding: 20px;
+    z-index: 1000;
+    display: block; 
+    text-align: center;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: block;
+}
+
+.close-button {
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 1.5em;
+    color: red; 
+}
+
+
+.timer-section {
+    text-align: center;
+    font-size: 1.5em;
+    background-color: yellow; 
+    padding: 10px;
+}
+
+/* Тёмная тема */
+body.dark-theme {
+  background-color: #333;
+  color: #fff;
+}
+
+body.dark-theme header,
+body.dark-theme main,
+body.dark-theme footer {
+  background-color: #444;
+  color: #fff;
+}
+
+body.dark-theme .top-reasons,
+body.dark-theme .testimonials {
+  background-color: #555;
+  color: #fff;
+  border: 2px dotted #fff;
+}
+
+body.dark-theme .sidebar {
+  background-color: #777;
+  color: #444;
+  border: 2px dotted #fff;
+}
+
+body.dark-theme .top-marquee,
+body.dark-theme .bottom-marquee,
+body.dark-theme .slogan,
+body.dark-theme .timer-section {
+  background-color: #fff;
+  color: #444;
+}
+
+body.dark-theme .popup {
+  background-color: #666;
+  color: #fff;
+}
+
+/* Кнопка переключения темы */
+#themeToggle {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background-color: #fff;
+  border-radius: 35px;;
+  padding: 5px;
+  cursor: pointer;
+  font-size: 40px;
+  z-index: 1001;
+}
+
+/* Отзывы */
+#reviewForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#reviewForm input,
+#reviewForm textarea,
+#reviewForm button {
+  padding: 10px;
+  font-size: 16px;
+}
+
+#reviewsList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.review-item {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  color: #333;
+}
+
+.review-item img {
+  max-width: 100px;
+  height: auto;
+  margin-top: 10px;
+}
+
+
+@media (max-width: 768px) {
+    .content {
+        grid-template-columns: 1fr; 
+    }
+
+    .sidebar {
+        order: -1; 
+    }
+
+    .product-images {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-images img {
+        max-width: 100%;
+    }
+
+    .side-ad { 
+        position: static;
+        transform: none;
+        text-align: center;
+        
+    }
+}
+
+@media (max-width: 320px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .top-reasons li {
+        font-size: 0.9em;
+    }
+
+    .sidebar {
+        padding: 10px;
+    }
+}
